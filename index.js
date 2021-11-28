@@ -17,8 +17,8 @@ server.on('request', (req, res) => {
                     controller.create(req, res);
                     break;
                 default:
-                    res.statusCode = 400;
-                    res.write('No Response');
+                    res.statusCode = 404;
+                    res.write('No such method');
                     res.end();
             }
             break;
@@ -40,14 +40,14 @@ server.on('request', (req, res) => {
                     break;
                 }
                 default:
-                    res.statusCode = 400;
-                    res.write('No Response');
+                    res.statusCode = 404;
+                    res.write('No such method');
                     res.end();
             }
             break;
         default:
-          res.statusCode = 500;
-          res.write(`CANNOT GET ${req.url}`);
+          res.statusCode = 404;
+          res.write('No such url');
           res.end();
     }
 });
