@@ -26,13 +26,13 @@ npm run start:prod
 
 ***Для успешного завершения тестов необходим работающий экземпляр API на localhost (запустить API в другом терминале)***
 
-###Terminal 1
+### Terminal 1
 ```
 # Run api
 npm run start:dev || npm run start:prod
 ```
 
-###Terminal 2
+### Terminal 2
 ```
 # Run api
 npm run test
