@@ -46,9 +46,9 @@ server.on('request', (req, res) => {
             }
             break;
         default:
-          res.statusCode = 404;
-          res.write('No such url');
-          res.end();
+            res.statusCode = 404;
+            res.write('No such url');
+            res.end();
     }
 });
 

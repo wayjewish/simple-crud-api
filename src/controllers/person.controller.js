@@ -115,8 +115,8 @@ const remove = async (req, res, id) => {
         }
 
         await model.remove(id);
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify(person));
+        res.writeHead(204, { 'Content-Type': 'application/json' });
+        res.end();
     } catch (error) {
         res.writeHead(500, { 'Content-Type': 'application/json' })
         res.end(JSON.stringify({ message: 'Something went wrong' }));
