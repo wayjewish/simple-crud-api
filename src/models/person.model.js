@@ -1,4 +1,5 @@
-const bd = require('../bd');
+const { v4: uuidv4 } = require('uuid');
+let bd = require('../bd');
 
 const findAll = () => {
     return new Promise((resolve, reject) => {
@@ -20,6 +21,7 @@ const create = (person) => {
             ...person,
         };
         bd.push(newPerson);
+        resolve(newPerson);
     });
 };
 
